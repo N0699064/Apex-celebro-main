@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: #1E48FF;
+    color: #ffffff;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#emergent-badge { display: none !important; }
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rainbow gradient used for outlines + glow */
+:root {
+    --rainbow: linear-gradient(130deg, #8B5CF6, #EC4899, #F97316, #3B82F6, #22D3EE, #22C55E, #8B5CF6);
+}
+
+/* Always-on rainbow outline with a soft glow halo */
+.glossy-border { position: relative; }
+.glossy-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.7px;
+    background: var(--rainbow);
+    background-size: 300% 300%;
+    animation: borderShine 7s ease infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+}
+.glossy-border::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--rainbow);
+    background-size: 300% 300%;
+    animation: borderShine 7s ease infinite;
+    filter: blur(16px);
+    opacity: 0.6;
+    z-index: -1;
+    pointer-events: none;
+}
+/* Stronger coloured glow (shadow halo) for the feature cards */
+.glossy-strong::after {
+    inset: -6px;
+    filter: blur(30px);
+    opacity: 0.8;
+}
+@keyframes borderShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Same rainbow outline + glow, revealed on hover */
+.glossy-hover { position: relative; }
+.glossy-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.7px;
+    background: var(--rainbow);
+    background-size: 300% 300%;
+    animation: borderShine 7s ease infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+.glossy-hover::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--rainbow);
+    background-size: 300% 300%;
+    animation: borderShine 7s ease infinite;
+    filter: blur(16px);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+.glossy-hover:hover::before { opacity: 1; }
+.glossy-hover:hover::after { opacity: 0.6; }
+
+/* Reliable multi-colour glow halo (renders as an outer shadow, always visible) */
+.glow-cast {
+    box-shadow: 0 0 40px -6px rgba(139,92,246,0.55),
+                0 0 60px -8px rgba(59,130,246,0.50),
+                0 0 82px -12px rgba(34,211,238,0.45),
+                0 0 72px -14px rgba(236,72,153,0.42);
+}
+.glow-cast-sm {
+    box-shadow: 0 0 16px -1px rgba(139,92,246,0.65),
+                0 0 26px -4px rgba(59,130,246,0.6),
+                0 0 34px -8px rgba(34,211,238,0.55);
+}
+
+/* Animated rainbow glow that shifts colour in sync with the outline */
+@property --gh {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+.glow-anim {
+    animation: glowHue 7s linear infinite;
+    box-shadow: 0 0 32px -8px hsl(var(--gh) 85% 62% / 0.32),
+                0 0 52px -14px hsl(calc(var(--gh) + 70) 85% 62% / 0.26),
+                0 0 72px -18px hsl(calc(var(--gh) + 170) 85% 62% / 0.22);
+}
+.glow-anim.glossy-border::before { opacity: 0.5; }
+
+/* Rainbow ring rendered on top of full-bleed content (service cards) */
+.ring-front.glossy-border::before { z-index: 4; opacity: 0.95; }
+.ring-front.glossy-border::after { inset: -3px; filter: blur(18px); opacity: 0.5; }
+
+/* Internal rainbow glow (matches the pricing plans) */
+.feature-card { isolation: isolate; }
+.feature-card.glossy-border::before { opacity: 0.55; }
+.feature-card.glossy-border::after {
+    inset: 0;
+    filter: blur(22px);
+    opacity: 0.45;
+}
+@keyframes glowHue {
+    to { --gh: 360; }
+}
+
+/* Subtle top gloss sheen for dark cards */
+.gloss-top::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.10), rgba(255,255,255,0) 42%);
+    pointer-events: none;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 226 44% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 226 44% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 226 44% 12%;
+        --primary: 226 44% 12%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 220 20% 96%;
+        --secondary-foreground: 226 44% 12%;
+        --muted: 220 20% 96%;
+        --muted-foreground: 220 10% 46%;
+        --accent: 220 20% 96%;
+        --accent-foreground: 226 44% 12%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 16% 90%;
+        --input: 220 16% 90%;
+        --ring: 229 100% 56%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+}
