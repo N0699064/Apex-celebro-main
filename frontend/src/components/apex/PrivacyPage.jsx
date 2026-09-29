@@ -47,7 +47,7 @@ const PrivacyPage = () => (
       <p>We retain submissions only as long as needed to evaluate and follow up on your inquiry, and we apply reasonable safeguards to protect them. You may request deletion of your data at any time.</p>
     </Section>
     <Section heading="Contact">
-      <p>Questions about this policy? Email <a href="mailto:hello@apexcerebro.com" className="text-brand-600 font-semibold">hello@apexcerebro.com</a>.</p>
+      <p>Questions about this policy? Email <a href="mailto:ceo@apexcerebro.co.uk" className="text-brand-600 font-semibold">ceo@apexcerebro.co.uk</a>.</p>
     </Section>
   </LegalShell>
 );

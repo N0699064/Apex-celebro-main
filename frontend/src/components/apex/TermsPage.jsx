@@ -47,7 +47,7 @@ const TermsPage = () => (
       <p>You agree to provide accurate information and not to misuse the site or attempt to disrupt its operation. Content on this site is provided “as is” without warranties of any kind.</p>
     </Section>
     <Section heading="Contact">
-      <p>Questions about these terms? Email <a href="mailto:hello@apexcerebro.com" className="text-brand-600 font-semibold">hello@apexcerebro.com</a>.</p>
+      <p>Questions about these terms? Email <a href="mailto:ceo@apexcerebro.co.uk" className="text-brand-600 font-semibold">ceo@apexcerebro.co.uk</a>.</p>
     </Section>
   </LegalShell>
 );

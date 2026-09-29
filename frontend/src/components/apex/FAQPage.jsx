@@ -68,7 +68,7 @@ const FAQPage = () => {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="border border-black/10 rounded-2xl px-6 bg-white transition-all duration-300 data-[state=open]:border-brand-300 data-[state=open]:shadow-[0_16px_45px_rgba(30,72,255,0.10)]"
+                className="border border-black/10 rounded-2xl px-6 bg-white transition-all duration-300 data-[state=open]:border-brand-300 data-[state=open]:shadow-[0_16px_45px_rgba(0,0,255,0.10)]"
                 data-testid={`faq-item-${i}`}
               >
                 <AccordionTrigger className="font-display font-bold text-ink text-lg hover:no-underline py-5">

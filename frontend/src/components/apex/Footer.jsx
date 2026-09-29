@@ -50,7 +50,7 @@ const Footer = () => {
               <li><button onClick={() => navigate('/faq')} className="hover:text-brand-300 transition-colors">FAQ</button></li>
               <li><button onClick={goPricing} className="hover:text-brand-300 transition-colors">Pricing</button></li>
               <li><button onClick={() => navigate('/contact')} className="hover:text-brand-300 transition-colors">Contact</button></li>
-              <li><a href="mailto:hello@apexcerebro.com" className="flex items-center gap-2 hover:text-brand-300 transition-colors"><Mail size={15} /> hello@apexcerebro.com</a></li>
+              <li><a href="mailto:ceo@apexcerebro.co.uk" className="flex items-center gap-2 hover:text-brand-300 transition-colors"><Mail size={15} /> ceo@apexcerebro.co.uk</a></li>
             </ul>
           </div>
         </div>

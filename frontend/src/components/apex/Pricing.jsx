@@ -19,7 +19,7 @@ const plans = [
     features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Dedicated automation engineer', 'SLA guarantee', 'Quarterly strategy reviews'],
   },
   {
-    name: 'Custom', price: "Let's talk", cadence: 'tailored to you', highlight: false,
+    name: 'Custom', price: "Let's talk", cadence: 'tailored to you · prices start at $50,000', highlight: false,
     tagline: 'When your stack needs something bespoke.',
     features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Flexible one-time or retainer', 'Ongoing optimization available'],
   },
@@ -51,8 +51,8 @@ const Pricing = () => {
                 key={p.name}
                 className={`relative flex flex-col rounded-[22px] p-6 lg:p-7 transition-all duration-300 ${
                   hot
-                    ? 'glossy-border bg-gradient-to-b from-brand-600/25 to-brand-800/10 shadow-[0_30px_70px_rgba(30,72,255,0.35)] lg:-translate-y-3'
-                    : 'glossy-hover bg-white/[0.04] border border-white/10 hover:shadow-[0_0_45px_rgba(30,72,255,0.28)]'
+                    ? 'glossy-border bg-gradient-to-b from-brand-600/25 to-brand-800/10 shadow-[0_30px_70px_rgba(0,0,255,0.35)] lg:-translate-y-3'
+                    : 'glossy-hover bg-white/[0.04] border border-white/10 hover:shadow-[0_0_45px_rgba(0,0,255,0.28)]'
                 }`}
                 data-testid={`plan-${p.name.toLowerCase().replace(/[^a-z]+/g, '-')}`}
               >

@@ -52,7 +52,7 @@ const AboutPage = () => {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div className="relative rounded-[28px] overflow-hidden shadow-[0_30px_70px_rgba(10,21,51,0.18)] aspect-[4/3]">
+          <div className="relative rounded-[28px] overflow-hidden shadow-[0_30px_70px_rgba(2,16,72,0.18)] aspect-[4/3]">
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600" alt="The APEX CEREBRO team at work" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent"></div>
           </div>
@@ -94,7 +94,7 @@ const AboutPage = () => {
             {values.map((v, i) => {
               const Icon = v.icon;
               return (
-                <div key={i} className="rounded-[24px] border border-black/8 bg-white p-8 hover:border-brand-300 hover:shadow-[0_20px_50px_rgba(30,72,255,0.10)] transition-all duration-300">
+                <div key={i} className="rounded-[24px] border border-black/8 bg-white p-8 hover:border-brand-300 hover:shadow-[0_20px_50px_rgba(0,0,255,0.10)] transition-all duration-300">
                   <div className="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6"><Icon size={26} strokeWidth={1.8} /></div>
                   <h3 className="font-display font-bold text-ink text-xl mb-3">{v.title}</h3>
                   <p className="text-ink/65 leading-relaxed">{v.body}</p>

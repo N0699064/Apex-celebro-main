@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Mail, Clock, ShieldCheck, Sparkles, Video, ArrowRight, CalendarClock } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import IntakeForm from './IntakeForm';
+import BookingFunnel from './BookingFunnel';
 
 const bookingOptions = [
   {
     icon: Video,
     duration: '45-Minute Consultation',
+    url: 'https://calendly.com/ceo-apexcerebro/30min',
     price: '£120',
     tag: 'Focused deep-dive',
     desc: 'A senior automation engineer digs into one core bottleneck and shows you exactly where the quick wins are.',
@@ -17,6 +19,7 @@ const bookingOptions = [
   {
     icon: CalendarClock,
     duration: '90-Minute Strategy Session',
+    url: 'https://calendly.com/ceo-apexcerebro/90-minute-meeting',
     price: '£250',
     tag: 'Full operation audit',
     highlight: true,
@@ -29,11 +32,11 @@ const ContactPage = () => {
   const location = useLocation();
   const initialPackage = location.state?.package || '';
 
+  const [funnelSession, setFunnelSession] = useState(null);
+  const closeFunnel = useCallback(() => setFunnelSession(null), []);
+
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const scrollToForm = () => {
-    document.getElementById('intake-form-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   return (
     <div className="bg-white">
@@ -68,7 +71,7 @@ const ContactPage = () => {
               return (
                 <div
                   key={b.duration}
-                  className={`relative flex flex-col rounded-[24px] bg-white p-7 lg:p-8 ${b.highlight ? 'glossy-border feature-card shadow-[0_24px_60px_rgba(30,72,255,0.14)]' : 'border border-black/8 shadow-[0_20px_50px_rgba(5,10,30,0.06)]'}`}
+                  className={`relative flex flex-col rounded-[24px] bg-white p-7 lg:p-8 ${b.highlight ? 'glossy-border feature-card shadow-[0_24px_60px_rgba(0,0,255,0.14)]' : 'border border-black/8 shadow-[0_20px_50px_rgba(2,16,72,0.06)]'}`}
                   data-testid={`booking-option-${b.price.replace(/[^0-9]/g, '')}`}
                 >
                   {b.highlight && (
@@ -91,7 +94,7 @@ const ContactPage = () => {
                     ))}
                   </ul>
                   <button
-                    onClick={scrollToForm}
+                    onClick={() => setFunnelSession({ title: b.duration, price: b.price, url: b.url })}
                     className={`mt-7 w-full flex items-center justify-center gap-2 rounded-full py-3.5 font-bold text-[15px] group transition-all duration-300 ${b.highlight ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'border border-brand-600/50 text-brand-600 hover:bg-brand-600 hover:text-white'}`}
                     data-testid={`booking-cta-${b.price.replace(/[^0-9]/g, '')}`}
                   >
@@ -113,7 +116,7 @@ const ContactPage = () => {
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Sidebar */}
           <div className="lg:col-span-4">
-            <div className="bg-white rounded-[28px] border border-black/8 p-8 shadow-[0_20px_50px_rgba(5,10,30,0.06)] sticky top-28">
+            <div className="bg-white rounded-[28px] border border-black/8 p-8 shadow-[0_20px_50px_rgba(2,16,72,0.06)] sticky top-28">
               <h3 className="font-display font-bold text-ink text-xl mb-6">What happens next</h3>
               <ul className="space-y-5">
                 {[
@@ -134,8 +137,8 @@ const ContactPage = () => {
                 })}
               </ul>
               <div className="mt-8 pt-6 border-t border-black/8">
-                <a href="mailto:hello@apexcerebro.com" className="flex items-center gap-2.5 text-ink hover:text-brand-600 transition-colors font-medium">
-                  <Mail size={18} className="text-brand-600" /> hello@apexcerebro.com
+                <a href="mailto:ceo@apexcerebro.co.uk" className="flex items-center gap-2.5 text-ink hover:text-brand-600 transition-colors font-medium">
+                  <Mail size={18} className="text-brand-600" /> ceo@apexcerebro.co.uk
                 </a>
               </div>
             </div>
@@ -149,6 +152,7 @@ const ContactPage = () => {
       </section>
 
       <Footer />
+      <BookingFunnel open={!!funnelSession} session={funnelSession} onClose={closeFunnel} />
     </div>
   );
 };

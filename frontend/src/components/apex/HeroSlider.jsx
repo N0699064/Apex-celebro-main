@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Calendar, Phone } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const slides = [
@@ -7,19 +7,19 @@ const slides = [
     eyebrow: 'AI Workflow Automation',
     title: 'Automation that runs itself.',
     sub: 'Custom AI agents that clear your busywork — so your team can focus on growth.',
-    image: 'https://images.unsplash.com/photo-1582005450386-52b25f82d9bb?auto=format&fit=crop&q=80&w=2200',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2200',
   },
   {
-    eyebrow: 'Connect Everything',
-    title: 'Every app, finally in sync.',
-    sub: 'End-to-end workflows with Make, Zapier and n8n across your whole stack.',
-    image: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=2200',
+    eyebrow: 'Connected Systems',
+    title: 'Your tools, connected.',
+    sub: 'We link your apps so data moves on its own — no more copy and paste.',
+    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=2200',
   },
   {
-    eyebrow: 'Always On',
-    title: 'Reads, replies, and routes. 24/7.',
-    sub: 'AI agents and document intelligence, working the moment new work arrives.',
-    image: 'https://images.unsplash.com/photo-1651340527836-263c5072968e?auto=format&fit=crop&q=80&w=2200',
+    eyebrow: 'Real Results',
+    title: 'Save hours every week.',
+    sub: 'Less admin, fewer errors and faster replies — so your team gets time back.',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2200',
   },
 ];
 
@@ -43,7 +43,7 @@ const HeroSlider = () => {
             <img src={s.image} alt="" className="absolute inset-0 w-full h-full object-cover" />
             {/* Balanced legibility wash — lets the picture show while keeping text crisp */}
             <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/35 to-ink/85"></div>
-            <div className="absolute inset-0 bg-brand-800/15"></div>
+            <div className="absolute inset-0 bg-brand/25"></div>
             <div className="absolute inset-0 opacity-[0.10]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.4) 1px, transparent 0)', backgroundSize: '44px 44px' }}></div>
 
             <div className={`relative z-10 text-center px-6 max-w-4xl mx-auto pt-48 pb-24 ${idx === i ? 'animate-fade-up' : ''}`}>
@@ -57,12 +57,13 @@ const HeroSlider = () => {
                   Book a Call
                   <span className="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5"><ArrowRight size={18} /></span>
                 </button>
-                <button onClick={() => navigate('/contact')} className="flex items-center gap-2.5 rounded-full bg-white/12 backdrop-blur-md border border-white/35 text-white px-6 py-3.5 font-semibold text-[15px] hover:bg-white/22 transition-all duration-300">
-                  <Calendar size={18} /> Book a 15-min demo
+                <button onClick={() => navigate('/services')} className="group flex items-center gap-3 rounded-full bg-white/12 backdrop-blur-md border border-white/35 text-white pl-7 pr-2 py-2 font-semibold text-[15px] hover:bg-white/22 transition-all duration-300">
+                  See our Services
+                  <span className="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5"><ArrowRight size={18} /></span>
                 </button>
-                <a href="tel:+15550123456" className="flex items-center gap-2.5 rounded-full bg-white/12 backdrop-blur-md border border-white/35 text-white px-6 py-3.5 font-semibold text-[15px] hover:bg-white/22 transition-all duration-300">
-                  <Phone size={18} /> Call us
-                </a>
+                <button onClick={() => navigate('/about')} className="flex items-center gap-2.5 rounded-full bg-white/12 backdrop-blur-md border border-white/35 text-white px-6 py-3.5 font-semibold text-[15px] hover:bg-white/22 transition-all duration-300">
+                  <Users size={18} /> About us
+                </button>
               </div>
             </div>
           </div>

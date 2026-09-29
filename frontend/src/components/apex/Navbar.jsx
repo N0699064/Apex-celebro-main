@@ -25,10 +25,10 @@ const Navbar = () => {
   };
 
   const pill = scrolled
-    ? 'bg-white/85 backdrop-blur-xl shadow-[0_12px_40px_rgba(10,21,51,0.14)] border border-black/5'
+    ? 'bg-white/85 backdrop-blur-xl shadow-[0_12px_40px_rgba(2,16,72,0.14)] border border-black/5'
     : 'bg-transparent border border-transparent';
   const text = scrolled ? 'text-ink' : 'text-white';
-  const cta = scrolled ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-white text-ink hover:bg-brand-600 hover:text-white';
+  const cta = scrolled ? 'bg-ink text-white hover:bg-ink-800' : 'bg-white text-ink hover:bg-ink hover:text-white';
 
   return (
     <nav className="fixed top-0 left-0 w-full z-[100]">
@@ -47,7 +47,7 @@ const Navbar = () => {
                 Services <ChevronDown size={15} className="transition-transform duration-300 group-hover:rotate-180" />
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
-                <div className="glossy-border w-[560px] max-w-[92vw] rounded-[22px] bg-white shadow-[0_30px_70px_rgba(10,21,51,0.22)] p-3">
+                <div className="glossy-border w-[560px] max-w-[92vw] rounded-[22px] bg-white shadow-[0_30px_70px_rgba(2,16,72,0.22)] p-3">
                   <div className="grid grid-cols-2 gap-1">
                     {services.map((s) => {
                       const Icon = s.icon;
@@ -76,7 +76,7 @@ const Navbar = () => {
                 Company <ChevronDown size={15} className="transition-transform duration-300 group-hover:rotate-180" />
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
-                <div className="glossy-border w-[300px] rounded-[22px] bg-white shadow-[0_30px_70px_rgba(10,21,51,0.22)] p-3">
+                <div className="glossy-border w-[300px] rounded-[22px] bg-white shadow-[0_30px_70px_rgba(2,16,72,0.22)] p-3">
                   <button onClick={() => navigate('/about')} className="w-full flex items-start gap-3 p-3 rounded-xl text-left hover:bg-brand-50 transition-colors">
                     <span className="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0"><Info size={19} /></span>
                     <span>
@@ -85,7 +85,7 @@ const Navbar = () => {
                     </span>
                   </button>
                   <button onClick={() => navigate('/faq')} className="w-full flex items-start gap-3 p-3 rounded-xl text-left hover:bg-brand-50 transition-colors">
-                    <span className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0"><HelpCircle size={19} /></span>
+                    <span className="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0"><HelpCircle size={19} /></span>
                     <span>
                       <span className="block font-bold text-ink text-[14px]">FAQ</span>
                       <span className="block text-ink/55 text-[12px] mt-0.5">Answers to common questions.</span>

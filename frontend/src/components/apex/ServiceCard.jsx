@@ -10,7 +10,7 @@ const ServiceCard = ({ s, glow = false }) => {
     <div className={`relative rounded-[24px] ${glow ? 'glossy-border ring-front' : ''}`}>
       <button
         onClick={() => navigate(`/services/${s.id}`)}
-        className="group relative block overflow-hidden rounded-[24px] h-[340px] w-full text-left border border-black/8 shadow-[0_10px_40px_rgba(10,21,51,0.06)] hover:shadow-[0_24px_60px_rgba(30,72,255,0.14)] transition-shadow duration-300"
+        className="group relative block overflow-hidden rounded-[24px] h-[340px] w-full text-left border border-black/8 shadow-[0_10px_40px_rgba(2,16,72,0.06)] hover:shadow-[0_24px_60px_rgba(0,0,255,0.14)] transition-shadow duration-300"
         data-testid={`service-card-${s.id}`}
       >
         {/* Base layer */}

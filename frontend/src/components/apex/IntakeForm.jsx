@@ -60,7 +60,7 @@ const IntakeForm = ({ initialPackage = '' }) => {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-[28px] border border-black/8 p-10 lg:p-14 text-center shadow-[0_20px_60px_rgba(5,10,30,0.08)]">
+      <div className="bg-white rounded-[28px] border border-black/8 p-10 lg:p-14 text-center shadow-[0_20px_60px_rgba(2,16,72,0.08)]">
         <div className="w-20 h-20 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-7">
           <CheckCircle2 size={44} className="text-brand-600" />
         </div>
@@ -74,7 +74,7 @@ const IntakeForm = ({ initialPackage = '' }) => {
   }
 
   return (
-    <form onSubmit={submit} className="bg-white rounded-[28px] border border-black/8 p-7 sm:p-10 shadow-[0_20px_60px_rgba(5,10,30,0.08)] space-y-7" noValidate data-testid="intake-form">
+    <form onSubmit={submit} className="bg-white rounded-[28px] border border-black/8 p-7 sm:p-10 shadow-[0_20px_60px_rgba(2,16,72,0.08)] space-y-7" noValidate data-testid="intake-form">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label className="text-ink font-semibold">Company Name <span className="text-brand-600">*</span></Label>

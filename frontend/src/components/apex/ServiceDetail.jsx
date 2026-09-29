@@ -41,7 +41,7 @@ const ServiceDetail = () => {
       {/* Content */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div className="rounded-[28px] overflow-hidden shadow-[0_30px_70px_rgba(5,10,30,0.15)] aspect-[4/3]">
+          <div className="rounded-[28px] overflow-hidden shadow-[0_30px_70px_rgba(2,16,72,0.15)] aspect-[4/3]">
             <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
           </div>
           <div>
@@ -72,7 +72,7 @@ const ServiceDetail = () => {
             {others.map((o) => {
               const OIcon = o.icon;
               return (
-                <button key={o.id} onClick={() => navigate(`/services/${o.id}`)} className="group text-left bg-white rounded-[22px] border border-black/8 p-7 hover:border-brand-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(30,72,255,0.10)] transition-all duration-300">
+                <button key={o.id} onClick={() => navigate(`/services/${o.id}`)} className="group text-left bg-white rounded-[22px] border border-black/8 p-7 hover:border-brand-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,255,0.10)] transition-all duration-300">
                   <div className={`w-12 h-12 rounded-xl ${o.tile} flex items-center justify-center mb-5`}>
                     <OIcon size={22} strokeWidth={1.8} />
                   </div>
