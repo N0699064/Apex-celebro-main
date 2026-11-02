@@ -19,7 +19,7 @@ const plans = [
     features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Dedicated automation engineer', 'SLA guarantee', 'Quarterly strategy reviews'],
   },
   {
-    name: 'Custom', price: "Let's talk", cadence: 'from £50,000', retainer: '£35,000', highlight: false,
+    name: 'Custom', price: 'from £50,000', cadence: 'bespoke build', retainer: '£35,000', highlight: false,
     tagline: 'When your stack needs something bespoke.',
     features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Flexible one-time or retainer', 'Ongoing optimization available'],
   },
