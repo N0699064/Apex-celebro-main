@@ -6,12 +6,12 @@ const plans = [
   {
     name: 'Simple Automation', price: '$8,000', cadence: 'one-time build', retainer: '$3,500', highlight: false,
     tagline: 'Automate one core workflow end-to-end.',
-    features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Full documentation', '2 weeks of support', 'Video handover walkthrough'],
+    features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Full documentation', 'Video handover walkthrough'],
   },
   {
     name: 'Multi-System Solution', price: '$15,000', cadence: 'one-time build', retainer: '$7,000', highlight: true, badge: 'Most Popular',
     tagline: 'Connect and automate across your whole stack.',
-    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline', '4 weeks priority support', 'Training session'],
+    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline'],
   },
   {
     name: 'Enterprise', price: 'from $35,000', cadence: 'scoped engagement', retainer: '$15,000', highlight: false,
