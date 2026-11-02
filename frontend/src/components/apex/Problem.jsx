@@ -9,24 +9,24 @@ const manualTiles = [
 ];
 
 const apexTiles = [
-  { icon: Zap, label: 'Instant Responses' },
+  { icon: Zap, label: 'Quicker Replies' },
   { icon: BadgeCheck, label: 'Clean, Sorted Data' },
-  { icon: ScanText, label: 'Zero Data Entry' },
+  { icon: ScanText, label: 'Less Data Entry' },
   { icon: DollarSign, label: 'Cost Savings' },
 ];
 
 const manualPoints = [
-  { t: 'Manual processes', d: 'Your team handles every email, document, and task by hand \u2014 all day, every day.' },
-  { t: 'Missed opportunities', d: 'Limited hours mean requests and follow-ups quietly slip through the cracks.' },
-  { t: 'Time-consuming sorting', d: 'Hours vanish sorting documents and routing messages to the right place.' },
-  { t: 'High overhead costs', d: 'You hire more people just to keep up with routine admin work.' },
+  { t: 'Everything done by hand', d: 'Every email, document and task is handled manually — eating into your day.' },
+  { t: 'Missed opportunities', d: 'When you’re busy, enquiries and follow-ups slip through the cracks.' },
+  { t: 'Time lost sorting', d: 'Hours go on sorting paperwork and forwarding messages to the right place.' },
+  { t: 'Rising costs', d: 'You end up paying for extra help — or working late — just to keep up with admin.' },
 ];
 
 const apexPoints = [
-  { icon: Zap, t: 'Speed-to-response advantage', d: 'Emails, forms, and messages are handled in seconds \u2014 nothing sits in a queue.' },
-  { icon: BadgeCheck, t: 'Capture every opportunity', d: 'Round-the-clock AI processes every request instantly, day or night.' },
-  { icon: ScanText, t: 'Smart document intelligence', d: 'AI reads and extracts data automatically, routing only what needs a human.' },
-  { icon: DollarSign, t: 'Lower operational costs', d: 'One automated pipeline does the work of extra headcount \u2014 for far less.' },
+  { icon: Zap, t: 'Faster replies', d: 'Routine emails, forms and messages get a quick first response, even when you’re busy.' },
+  { icon: BadgeCheck, t: 'Fewer missed enquiries', d: 'New requests are logged and followed up automatically, so fewer slip through.' },
+  { icon: ScanText, t: 'Less paperwork', d: 'Key details are pulled from your documents for you — only the tricky ones need your attention.' },
+  { icon: DollarSign, t: 'Lower admin costs', d: 'Less time on admin means more time for paid work, without hiring extra help.' },
 ];
 
 const MiniTile = ({ icon: Icon, label, tone }) => (
@@ -45,7 +45,7 @@ const Problem = () => {
         <div className="max-w-3xl mx-auto text-center mb-14">
           <span className="text-brand-300 font-bold tracking-[0.18em] text-xs uppercase">The core problem we solve</span>
           <h2 className="font-display font-bold text-white text-4xl lg:text-5xl mt-4 leading-tight">
-            Your best people are stuck doing work software should handle.
+            You’re spending hours on work software should handle.
           </h2>
         </div>
 

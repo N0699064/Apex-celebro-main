@@ -38,12 +38,17 @@ code {
     overflow: hidden;
 }
 
-/* Rainbow gradient used for outlines + glow */
+/* Brand-blue gradient used for outlines + glow (shades of blue only) */
 :root {
-    --rainbow: linear-gradient(130deg, #8B5CF6, #EC4899, #F97316, #0000FF, #22D3EE, #22C55E, #8B5CF6);
+    --blue-glow: linear-gradient(130deg, #A8C5FF, #5B8CFF, #0000FF, #0A1FD1, #4D7CFF, #A8C5FF);
 }
 
-/* Always-on rainbow outline with a soft glow halo */
+/* Brand background gradient (matches brand guidelines) */
+.brand-gradient {
+    background: linear-gradient(180deg, #0629B0 0%, #04208F 40%, #021048 100%);
+}
+
+/* Always-on blue outline with a soft glow halo */
 .glossy-border { position: relative; }
 .glossy-border::before {
     content: '';
@@ -51,7 +56,7 @@ code {
     inset: 0;
     border-radius: inherit;
     padding: 1.7px;
-    background: var(--rainbow);
+    background: var(--blue-glow);
     background-size: 300% 300%;
     animation: borderShine 7s ease infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -64,7 +69,7 @@ code {
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: var(--rainbow);
+    background: var(--blue-glow);
     background-size: 300% 300%;
     animation: borderShine 7s ease infinite;
     filter: blur(16px);
@@ -84,7 +89,7 @@ code {
     100% { background-position: 0% 50%; }
 }
 
-/* Same rainbow outline + glow, revealed on hover */
+/* Same blue outline + glow, revealed on hover */
 .glossy-hover { position: relative; }
 .glossy-hover::before {
     content: '';
@@ -92,7 +97,7 @@ code {
     inset: 0;
     border-radius: inherit;
     padding: 1.7px;
-    background: var(--rainbow);
+    background: var(--blue-glow);
     background-size: 300% 300%;
     animation: borderShine 7s ease infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -107,7 +112,7 @@ code {
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: var(--rainbow);
+    background: var(--blue-glow);
     background-size: 300% 300%;
     animation: borderShine 7s ease infinite;
     filter: blur(16px);
@@ -119,20 +124,20 @@ code {
 .glossy-hover:hover::before { opacity: 1; }
 .glossy-hover:hover::after { opacity: 0.6; }
 
-/* Reliable multi-colour glow halo (renders as an outer shadow, always visible) */
+/* Reliable blue glow halo (renders as an outer shadow, always visible) */
 .glow-cast {
-    box-shadow: 0 0 40px -6px rgba(139,92,246,0.55),
+    box-shadow: 0 0 40px -6px rgba(91,140,255,0.55),
                 0 0 60px -8px rgba(0,0,255,0.50),
-                0 0 82px -12px rgba(34,211,238,0.45),
-                0 0 72px -14px rgba(236,72,153,0.42);
+                0 0 82px -12px rgba(168,197,255,0.45),
+                0 0 72px -14px rgba(10,31,209,0.42);
 }
 .glow-cast-sm {
-    box-shadow: 0 0 16px -1px rgba(139,92,246,0.65),
+    box-shadow: 0 0 16px -1px rgba(91,140,255,0.65),
                 0 0 26px -4px rgba(0,0,255,0.6),
-                0 0 34px -8px rgba(34,211,238,0.55);
+                0 0 34px -8px rgba(168,197,255,0.55);
 }
 
-/* Animated rainbow glow that shifts colour in sync with the outline */
+/* Animated glow that shifts between shades of blue */
 @property --gh {
     syntax: '<number>';
     inherits: false;
@@ -140,17 +145,17 @@ code {
 }
 .glow-anim {
     animation: glowHue 7s linear infinite;
-    box-shadow: 0 0 32px -8px hsl(var(--gh) 85% 62% / 0.32),
-                0 0 52px -14px hsl(calc(var(--gh) + 70) 85% 62% / 0.26),
-                0 0 72px -18px hsl(calc(var(--gh) + 170) 85% 62% / 0.22);
+    box-shadow: 0 0 32px -8px hsl(calc(220 + var(--gh) / 18) 90% 62% / 0.32),
+                0 0 52px -14px hsl(calc(230 + var(--gh) / 18) 90% 55% / 0.26),
+                0 0 72px -18px hsl(calc(215 + var(--gh) / 18) 90% 70% / 0.22);
 }
 .glow-anim.glossy-border::before { opacity: 0.5; }
 
-/* Rainbow ring rendered on top of full-bleed content (service cards) */
+/* Blue ring rendered on top of full-bleed content (service cards) */
 .ring-front.glossy-border::before { z-index: 4; opacity: 0.95; }
 .ring-front.glossy-border::after { inset: -3px; filter: blur(18px); opacity: 0.5; }
 
-/* Internal rainbow glow (matches the pricing plans) */
+/* Internal blue glow (matches the pricing plans) */
 .feature-card { isolation: isolate; }
 .feature-card.glossy-border::before { opacity: 0.55; }
 .feature-card.glossy-border::after {
@@ -158,7 +163,7 @@ code {
     filter: blur(22px);
     opacity: 0.45;
 }
-/* Keep the rainbow outline but drop the blurred glow inside the card */
+/* Keep the blue outline but drop the blurred glow inside the card */
 .no-inner-glow.glossy-border::after { display: none; }
 
 @keyframes glowHue {

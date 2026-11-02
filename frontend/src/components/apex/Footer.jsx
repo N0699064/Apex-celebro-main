@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { services } from './ServicesData';
+import Logo from './Logo';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -21,16 +22,12 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-14 border-b border-white/10">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5 mb-5">
-              <img src="/apex-mark-white.png" alt="APEX CEREBRO" className="h-6 w-auto" />
-              <span className="font-display font-bold text-lg tracking-tight">APEX <span className="font-medium opacity-80">CEREBRO</span></span>
+            <div className="mb-5">
+              <Logo variant="light" size="lg" />
             </div>
             <p className="text-white/55 max-w-sm leading-relaxed">
-              Custom AI agents and automations that clear document, communication, and data-entry backlogs — so your team ships work, not busywork.
+              Simple AI tools and automations that take repetitive admin off your plate — so you can focus on the work that matters.
             </p>
-            <button onClick={() => navigate('/contact')} className="mt-7 inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white rounded-full px-6 py-3 font-bold text-sm transition-colors">
-              Book a Call <ArrowUpRight size={16} />
-            </button>
           </div>
 
           <div className="lg:col-span-4 lg:col-start-6">

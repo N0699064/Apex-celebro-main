@@ -85,7 +85,7 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      <CTABand heading={`Automate your ${s.title.toLowerCase()}.`} />
+      <CTABand heading={s.ctaHeading} />
       <Footer />
     </div>
   );

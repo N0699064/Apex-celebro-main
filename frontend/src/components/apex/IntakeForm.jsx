@@ -38,8 +38,8 @@ const IntakeForm = ({ initialPackage = '' }) => {
 
   const validate = () => {
     const e = {};
-    if (!form.companyName.trim()) e.companyName = 'Company name is required';
-    if (bottlenecks.length === 0 && !form.otherBottleneck.trim()) e.bottlenecks = 'Select at least one bottleneck';
+    if (!form.companyName.trim()) e.companyName = 'Please tell us your business name (or your own name)';
+    if (bottlenecks.length === 0 && !form.otherBottleneck.trim()) e.bottlenecks = 'Select at least one option';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = 'Enter a valid email address';
     if (!form.phone.trim()) e.phone = 'A contact phone number is required';
     return e;
@@ -77,23 +77,23 @@ const IntakeForm = ({ initialPackage = '' }) => {
     <form onSubmit={submit} className="bg-white rounded-[28px] border border-black/8 p-7 sm:p-10 shadow-[0_20px_60px_rgba(2,16,72,0.08)] space-y-7" noValidate data-testid="intake-form">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label className="text-ink font-semibold">Company Name <span className="text-brand-600">*</span></Label>
-          <Input value={form.companyName} onChange={(e) => set('companyName', e.target.value)} placeholder="Acme Operations Inc." className={inputCls} />
+          <Label className="text-ink font-semibold">Business name (or your name) <span className="text-brand-600">*</span></Label>
+          <Input value={form.companyName} onChange={(e) => set('companyName', e.target.value)} placeholder="e.g. Acme Ltd or Jane Smith Design" className={inputCls} />
           {errors.companyName && <p className="text-sm text-red-600">{errors.companyName}</p>}
         </div>
         <div className="space-y-2">
-          <Label className="text-ink font-semibold">Company Website</Label>
-          <Input value={form.website} onChange={(e) => set('website', e.target.value)} placeholder="acme.com" className={inputCls} />
+          <Label className="text-ink font-semibold">Website</Label>
+          <Input value={form.website} onChange={(e) => set('website', e.target.value)} placeholder="yourwebsite.com" className={inputCls} />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label className="text-ink font-semibold">Who handles the decision-making for this project?</Label>
-        <Input value={form.decisionMaker} onChange={(e) => set('decisionMaker', e.target.value)} placeholder="Name & role (e.g. Jordan Lee, COO)" className={inputCls} />
+        <Label className="text-ink font-semibold">Who makes the decisions for this project?</Label>
+        <Input value={form.decisionMaker} onChange={(e) => set('decisionMaker', e.target.value)} placeholder="Name & role (e.g. Jordan Lee, Owner)" className={inputCls} />
       </div>
 
       <div className="space-y-3">
-        <Label className="text-ink font-semibold">Your biggest operational bottleneck <span className="text-brand-600">*</span></Label>
+        <Label className="text-ink font-semibold">What takes up most of your time? <span className="text-brand-600">*</span></Label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {BOTTLENECKS.map((b) => {
             const active = bottlenecks.includes(b);
@@ -111,7 +111,7 @@ const IntakeForm = ({ initialPackage = '' }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label className="text-ink font-semibold">Hours per week lost to this</Label>
+          <Label className="text-ink font-semibold">Hours per week spent on this</Label>
           <Input type="number" min="0" value={form.hours} onChange={(e) => set('hours', e.target.value)} placeholder="e.g. 20" className={inputCls} />
         </div>
         <div className="space-y-2">
@@ -129,8 +129,8 @@ const IntakeForm = ({ initialPackage = '' }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label className="text-ink font-semibold">Direct email <span className="text-brand-600">*</span></Label>
-          <Input type="email" value={form.email} onChange={(e) => set('email', e.target.value)} placeholder="you@company.com" className={inputCls} />
+          <Label className="text-ink font-semibold">Email <span className="text-brand-600">*</span></Label>
+          <Input type="email" value={form.email} onChange={(e) => set('email', e.target.value)} placeholder="you@yourbusiness.com" className={inputCls} />
           {errors.email && <p className="text-sm text-red-600">{errors.email}</p>}
         </div>
         <div className="space-y-2">

@@ -11,7 +11,7 @@ const plans = [
   {
     name: 'Multi-System Solution', price: '$12,000', cadence: 'one-time project', highlight: true, badge: 'Most Popular',
     tagline: 'Connect and automate across your whole stack.',
-    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline', '4 weeks priority support', 'Team training session'],
+    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline', '4 weeks priority support', 'Training session'],
   },
   {
     name: 'Enterprise', price: 'from $30,000', cadence: 'scoped engagement', highlight: false,
@@ -84,7 +84,7 @@ const Pricing = () => {
                   }`}
                   data-testid={`plan-cta-${p.name.toLowerCase().replace(/[^a-z]+/g, '-')}`}
                 >
-                  Book a Call
+                  Get started
                   <ArrowRight size={17} className="transition-transform group-hover:translate-x-1 duration-300" />
                 </button>
               </div>

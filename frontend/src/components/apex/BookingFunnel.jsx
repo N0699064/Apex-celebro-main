@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-  X, ArrowLeft, ArrowRight, Check, CheckCircle2,
+  X, ArrowLeft, ArrowRight, Check, CheckCircle2, User,
   ShoppingBag, Briefcase, Megaphone, Code2, Building2, HeartPulse,
   Inbox, Keyboard, FileText, UserPlus, BarChart3, Headphones,
 } from 'lucide-react';
@@ -13,6 +13,7 @@ const steps = [
     q: 'What best describes your business?',
     type: 'single',
     options: [
+      { v: 'Freelancer / Sole trader', icon: User },
       { v: 'E-commerce', icon: ShoppingBag },
       { v: 'Professional services', icon: Briefcase },
       { v: 'Agency / Marketing', icon: Megaphone },
@@ -23,13 +24,13 @@ const steps = [
   },
   {
     key: 'teamSize',
-    q: 'How big is your team?',
+    q: 'How many people work in your business?',
     type: 'single',
     options: [{ v: 'Just me' }, { v: '2–10' }, { v: '11–50' }, { v: '51–200' }, { v: '200+' }],
   },
   {
     key: 'bottlenecks',
-    q: 'Where is your team losing the most time?',
+    q: 'Where are you losing the most time?',
     hint: 'Pick all that apply',
     type: 'multi',
     options: [
@@ -63,7 +64,7 @@ const buildCalendlyUrl = (base, a, d) => {
     `Company: ${d.company || '—'}`,
     `Industry: ${a.industry}`,
     `Team size: ${a.teamSize}`,
-    `Bottlenecks: ${(a.bottlenecks || []).join(', ')}`,
+    `Time drains: ${(a.bottlenecks || []).join(', ')}`,
     `Admin hours/week: ${a.hours}`,
     `Timeline: ${a.timeline}`,
     d.note ? `Notes: ${d.note}` : null,
@@ -249,8 +250,8 @@ const BookingFunnel = ({ open, onClose, session }) => {
                         <div className="mt-6 space-y-3">
                           {[
                             { k: 'name', ph: 'Full name *', type: 'text', ac: 'name' },
-                            { k: 'email', ph: 'Work email *', type: 'email', ac: 'email' },
-                            { k: 'company', ph: 'Company name', type: 'text', ac: 'organization' },
+                            { k: 'email', ph: 'Email *', type: 'email', ac: 'email' },
+                            { k: 'company', ph: 'Business name (optional)', type: 'text', ac: 'organization' },
                           ].map((f) => (
                             <input
                               key={f.k}

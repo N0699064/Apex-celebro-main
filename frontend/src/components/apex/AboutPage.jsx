@@ -4,25 +4,26 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CTABand from './CTABand';
+import WhyUs from './WhyUs';
 
 const values = [
-  { icon: Target, title: 'Outcomes, not output', body: 'We measure success in hours saved and errors removed — not lines of code or slide decks.' },
-  { icon: ShieldCheck, title: 'Fixed scope, fixed price', body: 'You know the number and the deliverable before we start. No creeping retainers, no surprise invoices.' },
-  { icon: Gauge, title: 'Operator mindset', body: 'We build like the people who have to live with the system every day — because that’s who we are.' },
-  { icon: Layers, title: 'Built to be owned', body: 'Every automation is documented and handed over, so your team stays in control long after launch.' },
+  { icon: Target, title: 'Results, not jargon', body: 'We measure success in hours saved and mistakes avoided — not in technical features.' },
+  { icon: ShieldCheck, title: 'Fixed scope, fixed price', body: 'You know the price and exactly what you’ll get before we start. No surprise invoices.' },
+  { icon: Gauge, title: 'Simple to use', body: 'We build things that are easy to use day to day — whether it’s just you or a whole department using them.' },
+  { icon: Layers, title: 'Yours to keep', body: 'Everything we build is explained and handed over, so you stay in control long after launch.' },
 ];
 
 const stats = [
-  { k: '6', v: 'Automation disciplines' },
+  { k: '6', v: 'Core services' },
   { k: '3', v: 'Platforms we build in · Make, Zapier, n8n' },
   { k: '1 day', v: 'Typical response time' },
   { k: '100%', v: 'Fixed-scope pricing' },
 ];
 
 const steps = [
-  { n: '01', t: 'Map', d: 'We audit the workflow that’s costing you the most and pin down exactly what “done” looks like.' },
-  { n: '02', t: 'Build', d: 'We wire the automation and AI logic, integrate your tools, and test it against real-world edge cases.' },
-  { n: '03', t: 'Hand over', d: 'We deploy, train your team, and document everything — then it quietly runs in the background.' },
+  { n: '01', t: 'Map', d: 'We look at the tasks taking up most of your time and agree exactly what the finished result should do.' },
+  { n: '02', t: 'Build', d: 'We set up the automation, connect it to the tools you already use and test it thoroughly.' },
+  { n: '03', t: 'Hand over', d: 'We switch it on, show you how it works and give you simple instructions to keep — then it runs in the background.' },
 ];
 
 const AboutPage = () => {
@@ -42,10 +43,10 @@ const AboutPage = () => {
             <span className="text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">About Us</span>
           </div>
           <h1 className="font-display font-bold text-white text-4xl lg:text-6xl leading-tight max-w-4xl mx-auto">
-            We turn manual bottlenecks into systems that run themselves.
+            We turn repetitive tasks into systems that run themselves.
           </h1>
           <p className="text-white/65 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-            APEX CEREBRO is a boutique AI automation consultancy for growing companies that are tired of watching great teams drown in paperwork.
+            APEX CEREBRO is an AI automation consultancy for freelancers, small businesses and large companies alike — anyone tired of losing hours to admin and paperwork.
           </p>
         </div>
       </section>
@@ -60,9 +61,9 @@ const AboutPage = () => {
             <span className="text-brand-600 font-bold tracking-[0.18em] text-xs uppercase">Why we exist</span>
             <h2 className="font-display font-bold text-ink text-3xl lg:text-4xl mt-4 mb-6 leading-tight">Software should do the boring work.</h2>
             <div className="space-y-5 text-ink/70 text-lg leading-relaxed">
-              <p>Every growing company hits the same wall: the tools multiply, the inbox fills up, and the paperwork never stops. Talented people end up copy-pasting between systems instead of doing the work they were hired for.</p>
-              <p>We started APEX CEREBRO to fix exactly that. We build custom AI agents and automations that quietly absorb the repetitive work — reading documents, answering routine messages, syncing data, and routing what’s left to the right person.</p>
-              <p>No theoretical blueprints. No jargon. Just systems that give your team their hours back.</p>
+              <p>Whether you work on your own or run a large company, the same thing happens: the apps multiply, the inbox fills up and the paperwork never stops. Hours that should go on your real work get spent copying information from one place to another.</p>
+              <p>We started APEX CEREBRO to fix exactly that. We set up AI tools and automations that take on the repetitive jobs — reading documents, answering routine messages and keeping your apps up to date — and pass anything that needs a human straight to you.</p>
+              <p>No jargon. Just simple systems that give you your time back.</p>
             </div>
           </div>
         </div>
@@ -86,9 +87,9 @@ const AboutPage = () => {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mb-14">
+          <div className="mb-14">
             <span className="text-brand-600 font-bold tracking-[0.18em] text-xs uppercase">What we believe</span>
-            <h2 className="font-display font-bold text-ink text-4xl lg:text-5xl mt-4 leading-tight">The principles behind every build.</h2>
+            <h2 className="font-display font-bold text-ink text-3xl sm:text-4xl lg:text-5xl mt-4 leading-tight lg:whitespace-nowrap">The principles behind every build.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((v, i) => {
@@ -105,7 +106,9 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="pb-20 lg:pb-28">
+      <WhyUs />
+
+      <section className="pt-20 lg:pt-28">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="text-brand-600 font-bold tracking-[0.18em] text-xs uppercase">How we work</span>
@@ -126,7 +129,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <CTABand heading="Let's find the hours hiding in your operation." />
+      <CTABand heading="Let's find the hours hiding in your week." />
       <Footer />
     </div>
   );

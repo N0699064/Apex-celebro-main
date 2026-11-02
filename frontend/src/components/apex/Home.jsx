@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import HeroSlider from './HeroSlider';
-import IntroCard from './IntroCard';
+import Hero from './Hero';
+import Highlights from './Highlights';
 import Problem from './Problem';
 import ServicesPreview from './ServicesPreview';
-import WhyUs from './WhyUs';
 import Pricing from './Pricing';
 import CTABand from './CTABand';
 import Footer from './Footer';
@@ -23,11 +22,10 @@ const Home = () => {
   return (
     <div className="bg-white">
       <Navbar />
-      <HeroSlider />
-      <IntroCard />
+      <Hero />
+      <Highlights />
       <Problem />
       <ServicesPreview />
-      <WhyUs />
       <Pricing />
       <CTABand />
       <Footer />

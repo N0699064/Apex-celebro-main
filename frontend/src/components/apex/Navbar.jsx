@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, ChevronDown, Info, HelpCircle } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { services } from './ServicesData';
+import Logo from './Logo';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -34,9 +35,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-[100]">
       <div className="container mx-auto px-4 lg:px-6 pt-4">
         <div className={`relative flex items-center justify-between rounded-full pl-5 pr-3 lg:pl-7 py-2.5 transition-all duration-300 ${pill} ${text}`}>
-          <button onClick={() => navigate('/')} className="flex items-center gap-2.5 select-none z-[110]" data-testid="brand-logo">
-            <img src={scrolled ? '/apex-mark-dark.png' : '/apex-mark-white.png'} alt="APEX CEREBRO" className="h-[22px] w-auto" />
-            <span className="font-display font-bold text-[17px] tracking-tight leading-none">APEX <span className="font-medium opacity-80">CEREBRO</span></span>
+          <button onClick={() => navigate('/')} className="flex items-center select-none z-[110]" data-testid="brand-logo" aria-label="APEX CEREBRO home">
+            <Logo variant={scrolled ? 'dark' : 'light'} />
           </button>
 
           {/* Center links */}

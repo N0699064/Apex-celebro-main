@@ -13,18 +13,18 @@ const bookingOptions = [
     url: 'https://calendly.com/ceo-apexcerebro/30min',
     price: '£120',
     tag: 'Focused deep-dive',
-    desc: 'A senior automation engineer digs into one core bottleneck and shows you exactly where the quick wins are.',
-    features: ['One bottleneck, fully unpacked', 'Live screen-share walkthrough', 'Action summary sent after the call'],
+    desc: 'An automation specialist looks at one task that’s taking up your time and shows you where the quick wins are.',
+    features: ['One problem, looked at in detail', 'Live screen-share walkthrough', 'Action summary sent after the call'],
   },
   {
     icon: CalendarClock,
     duration: '90-Minute Strategy Session',
     url: 'https://calendly.com/ceo-apexcerebro/90-minute-meeting',
     price: '£250',
-    tag: 'Full operation audit',
+    tag: 'Full review',
     highlight: true,
-    desc: 'A complete review of your operation and a prioritised automation roadmap you can start acting on immediately.',
-    features: ['End-to-end operation review', 'Prioritised automation roadmap', 'Rough investment & ROI estimate'],
+    desc: 'A full review of how you work, plus a prioritised plan of what to automate first.',
+    features: ['Full review of your processes', 'Prioritised automation plan', 'Rough cost & time-saving estimate'],
   },
 ];
 
@@ -50,7 +50,7 @@ const ContactPage = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
             <span className="text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">Book Your Consultation</span>
           </div>
-          <h1 className="font-display font-bold text-white text-4xl lg:text-6xl leading-tight max-w-3xl mx-auto">Tell us about your bottleneck.</h1>
+          <h1 className="font-display font-bold text-white text-4xl lg:text-6xl leading-tight max-w-3xl mx-auto">Tell us what’s taking up your time.</h1>
           <p className="text-white/65 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
             Book a paid call to get straight to a plan, or send us the details below and we&rsquo;ll come back to you within one business day.
           </p>
@@ -120,8 +120,8 @@ const ContactPage = () => {
               <h3 className="font-display font-bold text-ink text-xl mb-6">What happens next</h3>
               <ul className="space-y-5">
                 {[
-                  { icon: ShieldCheck, t: 'We review your profile', d: 'A senior engineer checks your bottleneck against what we can automate.' },
-                  { icon: Sparkles, t: 'You get a tailored outline', d: 'We email a scoped approach and rough investment — usually within a day.' },
+                  { icon: ShieldCheck, t: 'We review your request', d: 'We look at what you’ve told us and check what we can automate.' },
+                  { icon: Sparkles, t: 'You get a tailored outline', d: 'We email a suggested approach and rough cost — usually within a day.' },
                   { icon: Clock, t: 'You decide', d: 'Move forward on a fixed scope, or not. No pressure, no obligation.' },
                 ].map((x, i) => {
                   const I = x.icon;

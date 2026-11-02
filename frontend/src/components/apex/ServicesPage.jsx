@@ -22,9 +22,9 @@ const ServicesPage = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
             <span className="text-white/85 text-[11px] font-semibold tracking-[0.22em] uppercase">Our Services</span>
           </div>
-          <h1 className="font-display font-bold text-white text-4xl lg:text-6xl leading-tight max-w-4xl mx-auto">Six ways we take work off your team&rsquo;s plate.</h1>
+          <h1 className="font-display font-bold text-white text-4xl lg:text-6xl leading-tight max-w-4xl mx-auto">Six ways we take work off your plate.</h1>
           <p className="text-white/65 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-            From single-workflow fixes to org-wide AI pipelines — each service is built around your tools, your data, and the bottleneck that&rsquo;s costing you the most.
+            From one simple automation to larger projects — each service is built around the tools you already use and the tasks that take up most of your time.
           </p>
         </div>
       </section>

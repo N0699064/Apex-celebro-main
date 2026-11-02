@@ -12,7 +12,7 @@ const ServicesPreview = () => {
         <div className="max-w-2xl mx-auto text-center mb-14">
           <span className="text-brand-600 font-bold tracking-[0.18em] text-xs uppercase">What we build</span>
           <h2 className="font-display font-bold text-ink text-4xl lg:text-5xl mt-4 leading-tight">
-            Automation for every corner of your operation.
+            Automation for the jobs that eat up your time.
           </h2>
         </div>
 

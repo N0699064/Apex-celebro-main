@@ -4,13 +4,13 @@ import { Crosshair, Gauge } from 'lucide-react';
 const points = [
   {
     icon: Crosshair,
-    title: 'Zero Fluff, Pure Execution',
-    body: "We don't sell generic software advice or theoretical blueprints. We focus strictly on the uncompromising quality of the systems we build — and the bottom-line value they bring to your workplace capacity.",
+    title: 'No fluff, just results',
+    body: "We don't sell generic advice or complicated plans. We focus on building things that work well and save you real time.",
   },
   {
     icon: Gauge,
-    title: 'Outcomes Over Code',
-    body: 'We keep the technical complexity under the hood. You don\u2019t need to understand the underlying framework — you just need to see the hours, manual errors, and response times drop drastically.',
+    title: 'We handle the technical side',
+    body: 'You don’t need to understand how any of it works. You just get less admin, fewer mistakes and quicker replies to your customers.',
   },
 ];
 
@@ -22,7 +22,7 @@ const WhyUs = () => {
         <div className="max-w-2xl mb-16">
           <span className="text-brand-400 font-bold tracking-[0.18em] text-xs uppercase">Why work with us</span>
           <h2 className="font-display font-bold text-4xl lg:text-5xl mt-4 leading-tight">
-            Built by operators, not vendors.
+            Built by people who do the work.
           </h2>
         </div>
 
