@@ -25,6 +25,10 @@ code {
 
 #emergent-badge { display: none !important; }
 
+/* Hide the scrollbar on swipeable carousels */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;

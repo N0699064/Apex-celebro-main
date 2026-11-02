@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Target, ShieldCheck, Gauge, Layers, ArrowRight } from 'lucide-react';
+import { Target, ShieldCheck, Gauge, LifeBuoy, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -10,7 +10,7 @@ const values = [
   { icon: Target, title: 'Results, not jargon', body: 'We measure success in hours saved and mistakes avoided — not in technical features.' },
   { icon: ShieldCheck, title: 'Fixed scope, fixed price', body: 'You know the price and exactly what you’ll get before we start. No surprise invoices.' },
   { icon: Gauge, title: 'Simple to use', body: 'We build things that are easy to use day to day — whether it’s just you or a whole department using them.' },
-  { icon: Layers, title: 'Yours to keep', body: 'Everything we build is explained and handed over, so you stay in control long after launch.' },
+  { icon: LifeBuoy, title: 'Support that sticks around', body: 'We don’t disappear after launch. Your retainer covers ongoing support, fixes and improvements as your business grows.' },
 ];
 
 const stats = [

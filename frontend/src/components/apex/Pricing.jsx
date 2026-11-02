@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Check, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -29,6 +29,21 @@ const Pricing = () => {
   const navigate = useNavigate();
   const choose = (name) => navigate('/contact', { state: { package: name } });
 
+  // Mobile-only carousel: track which card is centred so the dots stay in sync with swiping
+  const trackRef = useRef(null);
+  const [slide, setSlide] = useState(0);
+  const onScroll = () => {
+    const el = trackRef.current;
+    if (!el || !el.firstElementChild) return;
+    const step = el.firstElementChild.offsetWidth + 16;
+    setSlide(Math.min(plans.length - 1, Math.round(el.scrollLeft / step)));
+  };
+  const goTo = (idx) => {
+    const el = trackRef.current;
+    const card = el?.children[idx];
+    if (card) el.scrollTo({ left: card.offsetLeft - el.offsetLeft - 24, behavior: 'smooth' });
+  };
+
   return (
     <section id="pricing" className="scroll-mt-24 bg-ink py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute -top-40 left-1/3 w-[700px] h-[700px] rounded-full bg-brand-600/15 blur-[150px] pointer-events-none"></div>
@@ -43,13 +58,17 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 items-stretch">
+        <div
+          ref={trackRef}
+          onScroll={onScroll}
+          className="no-scrollbar flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 items-stretch overflow-x-auto sm:overflow-visible snap-x snap-mandatory -mx-6 px-6 sm:mx-0 sm:px-0 pt-4 pb-6 sm:pt-0 sm:pb-0"
+        >
           {plans.map((p) => {
             const hot = p.highlight;
             return (
               <div
                 key={p.name}
-                className={`relative flex flex-col rounded-[22px] p-6 lg:p-7 transition-all duration-300 ${
+                className={`relative flex flex-col flex-shrink-0 w-[85%] sm:w-auto snap-center rounded-[22px] p-6 lg:p-7 transition-all duration-300 ${
                   hot
                     ? 'glossy-border bg-gradient-to-b from-brand-600/25 to-brand-800/10 shadow-[0_30px_70px_rgba(0,0,255,0.35)] lg:-translate-y-3'
                     : 'glossy-hover bg-white/[0.04] border border-white/10 hover:shadow-[0_0_45px_rgba(0,0,255,0.28)]'
@@ -91,6 +110,12 @@ const Pricing = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="flex sm:hidden justify-center gap-2.5 mt-2">
+          {plans.map((p, idx) => (
+            <button key={p.name} onClick={() => goTo(idx)} className={`h-2 rounded-full transition-all duration-300 ${idx === slide ? 'w-8 bg-brand-400' : 'w-2 bg-white/30'}`} aria-label={`Show ${p.name} plan`} />
+          ))}
         </div>
       </div>
     </section>
