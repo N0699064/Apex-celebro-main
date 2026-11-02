@@ -4,22 +4,22 @@ import { useNavigate } from 'react-router-dom';
 
 const plans = [
   {
-    name: 'Simple Automation', price: '$8,000', cadence: 'one-time build', retainer: '$3,500', highlight: false,
+    name: 'Simple Automation', price: '£8,000', cadence: 'one-time build', retainer: '£3,500', highlight: false,
     tagline: 'Automate one core workflow end-to-end.',
     features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Full documentation', 'Video handover walkthrough'],
   },
   {
-    name: 'Multi-System Solution', price: '$15,000', cadence: 'one-time build', retainer: '$7,000', highlight: true, badge: 'Most Popular',
+    name: 'Multi-System Solution', price: '£15,000', cadence: 'one-time build', retainer: '£7,000', highlight: true, badge: 'Most Popular',
     tagline: 'Connect and automate across your whole stack.',
     features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline'],
   },
   {
-    name: 'Enterprise', price: 'from $35,000', cadence: 'scoped engagement', retainer: '$15,000', highlight: false,
+    name: 'Enterprise', price: '£35,000', cadence: 'scoped engagement', retainer: '£15,000', highlight: false,
     tagline: 'Org-wide deployment with dedicated support.',
     features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Dedicated automation engineer', 'SLA guarantee', 'Quarterly strategy reviews'],
   },
   {
-    name: 'Custom', price: "Let's talk", cadence: 'tailored to you · from $50,000', retainer: '$35,000', highlight: false,
+    name: 'Custom', price: "Let's talk", cadence: 'from £50,000', retainer: '£35,000', highlight: false,
     tagline: 'When your stack needs something bespoke.',
     features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Flexible one-time or retainer', 'Ongoing optimization available'],
   },
