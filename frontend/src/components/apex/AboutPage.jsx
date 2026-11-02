@@ -7,9 +7,9 @@ import CTABand from './CTABand';
 import WhyUs from './WhyUs';
 
 const values = [
-  { icon: Target, title: 'Results, not jargon', body: 'We measure success in hours saved and mistakes avoided — not in technical features.' },
+  { icon: Target, title: 'Results, not jargon', body: 'We measure success in hours saved and mistakes avoided, not in technical features.' },
   { icon: ShieldCheck, title: 'Fixed scope, fixed price', body: 'You know the price and exactly what you’ll get before we start. No surprise invoices.' },
-  { icon: Gauge, title: 'Simple to use', body: 'We build things that are easy to use day to day — whether it’s just you or a whole department using them.' },
+  { icon: Gauge, title: 'Simple to use', body: 'We build things that are easy to use day to day, whether it’s just you or a whole department using them.' },
   { icon: LifeBuoy, title: 'Support that sticks around', body: 'We don’t disappear after launch. Your retainer covers ongoing support, fixes and improvements as your business grows.' },
 ];
 
@@ -23,7 +23,7 @@ const stats = [
 const steps = [
   { n: '01', t: 'Map', d: 'We look at the tasks taking up most of your time and agree exactly what the finished result should do.' },
   { n: '02', t: 'Build', d: 'We set up the automation, connect it to the tools you already use and test it thoroughly.' },
-  { n: '03', t: 'Hand over', d: 'We switch it on, show you how it works and give you simple instructions to keep — then it runs in the background.' },
+  { n: '03', t: 'Hand over', d: 'We switch it on, show you how it works and give you simple instructions to keep. Then it runs in the background.' },
 ];
 
 const AboutPage = () => {
@@ -46,7 +46,7 @@ const AboutPage = () => {
             We turn repetitive tasks into systems that run themselves.
           </h1>
           <p className="text-white/65 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-            APEX CEREBRO is an AI automation consultancy for freelancers, small businesses and large companies alike — anyone tired of losing hours to admin and paperwork.
+            APEX CEREBRO is an AI automation consultancy for freelancers, small businesses and large companies alike. Anyone tired of losing hours to admin and paperwork.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ const AboutPage = () => {
             <h2 className="font-display font-bold text-ink text-3xl lg:text-4xl mt-4 mb-6 leading-tight">Software should do the boring work.</h2>
             <div className="space-y-5 text-ink/70 text-lg leading-relaxed">
               <p>Whether you work on your own or run a large company, the same thing happens: the apps multiply, the inbox fills up and the paperwork never stops. Hours that should go on your real work get spent copying information from one place to another.</p>
-              <p>We started APEX CEREBRO to fix exactly that. We set up AI tools and automations that take on the repetitive jobs — reading documents, answering routine messages and keeping your apps up to date — and pass anything that needs a human straight to you.</p>
+              <p>We started APEX CEREBRO to fix exactly that. We set up AI tools and automations that take on the repetitive jobs, like reading documents, answering routine messages and keeping your apps up to date. Anything that needs a human is passed straight to you.</p>
               <p>No jargon. Just simple systems that give you your time back.</p>
             </div>
           </div>

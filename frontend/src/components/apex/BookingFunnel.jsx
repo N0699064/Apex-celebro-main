@@ -54,14 +54,14 @@ const steps = [
     type: 'single',
     options: [{ v: 'As soon as possible' }, { v: 'Within 1–3 months' }, { v: 'Just exploring' }],
   },
-  { key: 'details', q: 'Last step — where should we send the invite?', type: 'details' },
+  { key: 'details', q: 'Last step: where should we send the invite?', type: 'details' },
 ];
 
 const TOTAL = steps.length;
 
 const buildCalendlyUrl = (base, a, d) => {
   const summary = [
-    `Company: ${d.company || '—'}`,
+    `Company: ${d.company || 'Not given'}`,
     `Industry: ${a.industry}`,
     `Team size: ${a.teamSize}`,
     `Time drains: ${(a.bottlenecks || []).join(', ')}`,

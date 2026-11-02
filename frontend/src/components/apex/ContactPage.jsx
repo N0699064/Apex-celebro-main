@@ -63,7 +63,7 @@ const ContactPage = () => {
           <div className="max-w-2xl mx-auto text-center mb-10">
             <span className="text-brand-600 font-bold tracking-[0.18em] text-xs uppercase">Book a call directly</span>
             <h2 className="font-display font-bold text-ink text-3xl lg:text-4xl mt-3 leading-tight">Pick a paid session</h2>
-            <p className="text-ink/60 mt-3 leading-relaxed">Prefer to jump straight on a call? Choose the session that fits — no forms, no waiting.</p>
+            <p className="text-ink/60 mt-3 leading-relaxed">Prefer to jump straight on a call? Choose the session that fits. No forms, no waiting.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {bookingOptions.map((b) => {
@@ -121,7 +121,7 @@ const ContactPage = () => {
               <ul className="space-y-5">
                 {[
                   { icon: ShieldCheck, t: 'We review your request', d: 'We look at what you’ve told us and check what we can automate.' },
-                  { icon: Sparkles, t: 'You get a tailored outline', d: 'We email a suggested approach and rough cost — usually within a day.' },
+                  { icon: Sparkles, t: 'You get a tailored outline', d: 'We email a suggested approach and rough cost, usually within a day.' },
                   { icon: Clock, t: 'You decide', d: 'Move forward on a fixed scope, or not. No pressure, no obligation.' },
                 ].map((x, i) => {
                   const I = x.icon;

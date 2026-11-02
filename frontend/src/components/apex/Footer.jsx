@@ -26,7 +26,7 @@ const Footer = () => {
               <Logo variant="light" size="lg" />
             </div>
             <p className="text-white/55 max-w-sm leading-relaxed">
-              Simple AI tools and automations that take repetitive admin off your plate — so you can focus on the work that matters.
+              Simple AI tools and automations that take repetitive admin off your plate, so you can focus on the work that matters.
             </p>
           </div>
 

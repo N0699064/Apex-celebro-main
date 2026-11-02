@@ -16,16 +16,16 @@ const apexTiles = [
 ];
 
 const manualPoints = [
-  { t: 'Everything done by hand', d: 'Every email, document and task is handled manually — eating into your day.' },
+  { t: 'Everything done by hand', d: 'Every email, document and task is handled manually, eating into your day.' },
   { t: 'Missed opportunities', d: 'When you’re busy, enquiries and follow-ups slip through the cracks.' },
   { t: 'Time lost sorting', d: 'Hours go on sorting paperwork and forwarding messages to the right place.' },
-  { t: 'Rising costs', d: 'You end up paying for extra help — or working late — just to keep up with admin.' },
+  { t: 'Rising costs', d: 'You end up paying for extra help, or working late, just to keep up with admin.' },
 ];
 
 const apexPoints = [
   { icon: Zap, t: 'Faster replies', d: 'Routine emails, forms and messages get a quick first response, even when you’re busy.' },
   { icon: BadgeCheck, t: 'Fewer missed enquiries', d: 'New requests are logged and followed up automatically, so fewer slip through.' },
-  { icon: ScanText, t: 'Less paperwork', d: 'Key details are pulled from your documents for you — only the tricky ones need your attention.' },
+  { icon: ScanText, t: 'Less paperwork', d: 'Key details are pulled from your documents for you. Only the tricky ones need your attention.' },
   { icon: DollarSign, t: 'Lower admin costs', d: 'Less time on admin means more time for paid work, without hiring extra help.' },
 ];
 

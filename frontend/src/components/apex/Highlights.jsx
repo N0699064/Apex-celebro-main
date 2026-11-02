@@ -7,14 +7,14 @@ const slides = [
     icon: Inbox,
     eyebrow: 'Less admin',
     title: 'Hand off the repetitive jobs.',
-    sub: 'Emails, forms and data entry taken care of — so you can spend your time on the work you actually enjoy.',
+    sub: 'Emails, forms and data entry taken care of, so you can spend your time on the work you actually enjoy.',
     image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=1600',
   },
   {
     icon: Cable,
     eyebrow: 'Connected tools',
     title: 'Your apps, working together.',
-    sub: 'We link the apps you already use so information moves between them on its own — no more copy and paste.',
+    sub: 'We link the apps you already use so information moves between them on its own. No more copy and paste.',
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1600',
   },
   {

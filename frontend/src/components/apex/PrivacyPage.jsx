@@ -38,7 +38,7 @@ const PrivacyPage = () => (
   <LegalShell title="Privacy Policy" updated={new Date().toLocaleDateString()}>
     <p>APEX CEREBRO (“we”, “us”) respects your privacy. This policy explains what we collect through this website and how we use it.</p>
     <Section heading="Information we collect">
-      <p>When you submit the consultation intake form, we collect the details you provide — such as your business name, website, decision-maker, the tasks you described, estimated hours lost, package interest, email, and phone number. We also collect basic, anonymous usage analytics.</p>
+      <p>When you submit the consultation intake form, we collect the details you provide, such as your business name, website, decision-maker, the tasks you described, estimated hours lost, package interest, email, and phone number. We also collect basic, anonymous usage analytics.</p>
     </Section>
     <Section heading="How we use it">
       <p>We use your information solely to review your request, assess fit, and contact you about a potential engagement. We do not sell your data. We do not send unsolicited marketing without your consent.</p>

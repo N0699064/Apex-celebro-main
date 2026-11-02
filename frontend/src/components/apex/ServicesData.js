@@ -16,7 +16,7 @@ export const services = [
     icon: Workflow,
     tile: 'bg-brand-50 text-brand-600',
     image: SERVICE_IMAGES.workflow,
-    description: 'We connect the apps you already use so repetitive tasks — like copying details from one place to another — happen automatically.',
+    description: 'We connect the apps you already use so repetitive tasks, like copying details from one place to another, happen automatically.',
     intro: 'Most businesses use several apps that don’t talk to each other, so someone ends up copying information between them. We look at the tasks you repeat most and set them up to run automatically using tools like Make, Zapier or n8n.',
     points: [
       'Automations built in Make, Zapier or n8n',
@@ -33,7 +33,7 @@ export const services = [
     tile: 'bg-brand-100 text-brand-600',
     image: SERVICE_IMAGES.chatbots,
     description: 'AI assistants that answer common customer questions, collect enquiry details and pass anything complex on to you.',
-    intro: 'We set up an AI assistant that learns from your own information — your website, FAQs and documents — so it answers in your words. It handles the routine questions and hands anything tricky over to a real person, with the full conversation attached.',
+    intro: 'We set up an AI assistant that learns from your own information, such as your website, FAQs and documents, so it answers in your words. It handles the routine questions and hands anything tricky over to a real person, with the full conversation attached.',
     points: [
       'Answers common questions using your own information',
       'Collects enquiry details outside working hours',
@@ -55,7 +55,7 @@ export const services = [
       'Checks the details and flags anything that looks wrong',
       'Saves the information into the apps you already use',
     ],
-    outcome: 'Far less typing — and fewer costly mistakes.',
+    outcome: 'Far less typing and fewer costly mistakes.',
     ctaHeading: 'Ready to cut down on paperwork?',
   },
   {
@@ -64,7 +64,7 @@ export const services = [
     icon: TrendingUp,
     tile: 'bg-brand-100 text-brand-600',
     image: SERVICE_IMAGES.crm,
-    description: 'Keep track of every lead and customer automatically — with follow-ups sent on time and your contact list kept up to date.',
+    description: 'Keep track of every lead and customer automatically, with follow-ups sent on time and your contact list kept up to date.',
     intro: 'A CRM is simply a system for keeping track of your customers and leads. We set yours up so new enquiries are added automatically, follow-up emails go out on time and your records stay up to date across your tools.',
     points: [
       'New leads added and organised automatically',
@@ -80,7 +80,7 @@ export const services = [
     icon: BarChart3,
     tile: 'bg-brand-50 text-brand-600',
     image: SERVICE_IMAGES.reporting,
-    description: 'Your key numbers gathered into one simple dashboard that updates itself — no more building spreadsheets by hand.',
+    description: 'Your key numbers gathered into one simple dashboard that updates itself. No more building spreadsheets by hand.',
     intro: 'Instead of pulling figures from different apps into a spreadsheet every week, we set up a dashboard that collects them for you and keeps them up to date.',
     points: [
       'One dashboard showing the numbers that matter to you',
@@ -97,7 +97,7 @@ export const services = [
     tile: 'bg-brand-50 text-brand-600',
     image: SERVICE_IMAGES.integrations,
     description: 'When your apps don’t connect on their own, we build a custom link between them so information flows automatically.',
-    intro: 'Some apps — especially older or specialist ones — don’t have a ready-made way to connect. When that’s the case, we build a custom connection so your tools can share information without you copying it across.',
+    intro: 'Some apps, especially older or specialist ones, don’t have a ready-made way to connect. When that’s the case, we build a custom connection so your tools can share information without you copying it across.',
     points: [
       'Custom connections for specialist or older software',
       'Secure, monitored, and set up to retry if something fails',

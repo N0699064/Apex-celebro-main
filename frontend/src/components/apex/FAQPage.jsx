@@ -7,7 +7,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '..
 const faqs = [
   {
     q: 'What exactly does APEX CEREBRO do?',
-    a: 'We set up AI tools and automations that take care of repetitive work — like sorting documents, replying to routine messages, data entry and moving information between apps — so you can focus on the work that matters.',
+    a: 'We set up AI tools and automations that take care of repetitive work, like sorting documents, replying to routine messages, data entry and moving information between apps, so you can focus on the work that matters.',
   },
   {
     q: 'Which tools do you build with?',
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'What happens after launch?',
-    a: 'Everything we build is documented and handed over, so it’s yours. If you’d like ongoing help, we offer optional support and improvements — otherwise it simply keeps running in the background.',
+    a: 'Everything we build is documented and handed over, so it’s yours. If you’d like ongoing help, we offer optional support and improvements. Otherwise it simply keeps running in the background.',
   },
   {
     q: 'How do I get started?',

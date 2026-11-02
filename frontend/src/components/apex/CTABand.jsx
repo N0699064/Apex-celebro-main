@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const CTABand = ({ heading = 'Ready to hand the busywork to AI?', sub = 'Tell us what takes up most of your time. We review every request and reply within one business day — no obligation.' }) => {
+const CTABand = ({ heading = 'Ready to hand the busywork to AI?', sub = 'Tell us what takes up most of your time. We review every request and reply within one business day, with no obligation.' }) => {
   const navigate = useNavigate();
   return (
     <section className="bg-white px-4 sm:px-6 py-16 lg:py-24">
