@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'How much does it cost?',
-    a: 'Pricing is fixed and shared upfront: Simple Automation from $4,500, Multi-System Solution from $12,000, Enterprise scoped per engagement, and Custom quotes for bespoke work. No hidden retainers or hourly billing.',
+    a: 'Pricing is fixed and shared upfront. Each plan is a one-time build plus a retainer for ongoing support: Simple Automation $8,000 (+ $3,500 retainer), Multi-System Solution $15,000 (+ $7,000 retainer), Enterprise from $35,000 (+ $15,000 retainer) and Custom from $50,000 (+ $35,000 retainer). No hourly billing or hidden costs.',
   },
   {
     q: 'What happens after launch?',

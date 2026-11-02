@@ -4,22 +4,22 @@ import { useNavigate } from 'react-router-dom';
 
 const plans = [
   {
-    name: 'Simple Automation', price: '$4,500', cadence: 'one-time project', highlight: false,
+    name: 'Simple Automation', price: '$8,000', cadence: 'one-time build', retainer: '$3,500', highlight: false,
     tagline: 'Automate one core workflow end-to-end.',
     features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Full documentation', '2 weeks of support', 'Video handover walkthrough'],
   },
   {
-    name: 'Multi-System Solution', price: '$12,000', cadence: 'one-time project', highlight: true, badge: 'Most Popular',
+    name: 'Multi-System Solution', price: '$15,000', cadence: 'one-time build', retainer: '$7,000', highlight: true, badge: 'Most Popular',
     tagline: 'Connect and automate across your whole stack.',
     features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline', '4 weeks priority support', 'Training session'],
   },
   {
-    name: 'Enterprise', price: 'from $30,000', cadence: 'scoped engagement', highlight: false,
+    name: 'Enterprise', price: 'from $35,000', cadence: 'scoped engagement', retainer: '$15,000', highlight: false,
     tagline: 'Org-wide deployment with dedicated support.',
     features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Dedicated automation engineer', 'SLA guarantee', 'Quarterly strategy reviews'],
   },
   {
-    name: 'Custom', price: "Let's talk", cadence: 'tailored to you · prices start at $50,000', highlight: false,
+    name: 'Custom', price: "Let's talk", cadence: 'tailored to you · from $50,000', retainer: '$35,000', highlight: false,
     tagline: 'When your stack needs something bespoke.',
     features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Flexible one-time or retainer', 'Ongoing optimization available'],
   },
@@ -39,7 +39,7 @@ const Pricing = () => {
             Fixed-scope pricing. Scale when you’re ready.
           </h2>
           <p className="text-white/60 text-lg mt-5 leading-relaxed">
-            No retainer lock-ins, no hourly billing, no hidden costs. Pay for what you need — every project is priced upfront.
+            No hourly billing, no hidden costs. Each plan is a one-time build plus a retainer for ongoing support — every project is priced upfront.
           </p>
         </div>
 
@@ -64,6 +64,7 @@ const Pricing = () => {
                 <h3 className="font-display font-bold text-white text-lg leading-tight min-h-[2.6rem]">{p.name}</h3>
                 <div className="mt-3 font-display font-bold text-white text-[2rem] lg:text-[2.1rem] tracking-tight">{p.price}</div>
                 <span className="text-white/45 text-sm font-medium mt-1">{p.cadence}</span>
+                <span className="mt-3 inline-flex self-start rounded-full bg-brand-600/25 border border-brand-400/30 text-brand-200 text-[13px] font-semibold px-3 py-1">+ {p.retainer} retainer</span>
                 <p className="text-white/65 mt-4 leading-relaxed text-[15px]">{p.tagline}</p>
 
                 <ul className="mt-6 space-y-3 flex-grow">
