@@ -9,6 +9,13 @@
   CI = "false"
   NPM_FLAGS = "--legacy-peer-deps"
 
+# Serverless functions (paths are relative to the "frontend" base directory).
+# calendly-booking-background turns paid Calendly bookings into a meeting-prep deck.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["public/apex-mark-white.png"]
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
