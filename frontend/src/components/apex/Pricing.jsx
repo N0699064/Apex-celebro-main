@@ -6,22 +6,22 @@ const plans = [
   {
     name: 'Simple Automation', price: '£8,000', cadence: 'One-Time Build', retainer: '£3,500', highlight: false,
     tagline: 'Automate one core workflow end-to-end.',
-    features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Full documentation', 'Video handover walkthrough'],
+    features: ['Single workflow automation (Make / Zapier / n8n)', 'Up to 3 app integrations', 'Dedicated automation engineer', 'Live walkthrough before launch', 'Full documentation + video handover', 'Monthly retainer support included'],
   },
   {
     name: 'Multi-System Solution', price: '£15,000', cadence: 'One-Time Build', retainer: '£7,000', highlight: true, badge: 'Most Popular',
     tagline: 'Connect and automate across your whole stack.',
-    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot component included', 'Document intelligence pipeline'],
+    features: ['Multi-step automation suite', 'Unlimited app integrations', 'AI agent / chatbot included', 'Document intelligence pipeline', 'Dedicated automation engineer', 'Live walkthrough before launch', 'Monthly retainer support included'],
   },
   {
     name: 'Enterprise', price: '£35,000', cadence: 'Scoped Engagement', retainer: '£15,000', highlight: false,
     tagline: 'Org-wide deployment with dedicated support.',
-    features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Dedicated automation engineer', 'SLA guarantee', 'Quarterly strategy reviews'],
+    features: ['Everything in Multi-System', 'Multi-department rollout', 'Custom AI logic + security review', 'Process audit + automation roadmap', 'Staff training at launch', 'Admin dashboard', 'Role-based access setup', 'GDPR and data-handling pack'],
   },
   {
     name: 'Custom', price: '£50,000', cadence: 'Bespoke Build', retainer: '£35,000', highlight: false,
     tagline: 'When your stack needs something bespoke.',
-    features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Flexible one-time or retainer', 'Ongoing optimization available'],
+    features: ['Bespoke API integrations for your stack', 'Scoped to your exact workflows', 'Dedicated automation engineer', 'Live walkthrough before launch', 'Monthly retainer with ongoing optimisation'],
   },
 ];
 
@@ -83,7 +83,7 @@ const Pricing = () => {
                 <h3 className="font-display font-bold text-white text-lg leading-tight min-h-[2.6rem]">{p.name}</h3>
                 <div className="mt-3 font-display font-bold text-white text-[2rem] lg:text-[2.1rem] tracking-tight">{p.price}</div>
                 <span className="text-white/45 text-sm font-medium mt-1">{p.cadence}</span>
-                <span className="mt-3 inline-flex self-start rounded-full bg-brand-600/25 border border-brand-400/30 text-brand-200 text-[13px] font-semibold px-3 py-1">+ {p.retainer} retainer</span>
+                <span className="mt-3 inline-flex self-start rounded-full bg-brand-600/25 border border-brand-400/30 text-brand-200 text-[13px] font-semibold px-3 py-1">+ {p.retainer} monthly retainer</span>
                 <p className="text-white/65 mt-4 leading-relaxed text-[15px]">{p.tagline}</p>
 
                 <ul className="mt-6 space-y-3 flex-grow">
